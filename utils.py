@@ -17,9 +17,9 @@ def display_markdown(*args, **kwargs):
     return display(Markdown(*args, **kwargs))
 
 
-def display_evaluation_errors(y_train, y_train_pred, y_valid, y_valid_pred):
+def make_evaluation_errors_table(y_train, y_train_pred, y_valid, y_valid_pred):
     """
-    Mostrar valores de error de una evaluación.
+    Crear dataframe con valores de error de una evaluación.
     """
     metric_functions = [
         ('R squared', r2_score),
@@ -34,7 +34,14 @@ def display_evaluation_errors(y_train, y_train_pred, y_valid, y_valid_pred):
         ]
         for metric_function_name, metric_function in metric_functions
     }
-    display(pd.DataFrame(data, index=['Training', 'Validation']))
+    return pd.DataFrame(data, index=['Training', 'Validation'])
+
+
+def display_evaluation_errors(*args, **kargs):
+    """
+    Mostrar valores de error de una evaluación.
+    """
+    display(make_evaluation_errors_table(*args, **kargs))
 
 
 def display_evaluation_table(y_real, y_pred, n_values=10, with_errors=True):
