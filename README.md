@@ -1,6 +1,6 @@
 # Machine Learning Model - XGBoost Regressor
 
-This repository outlines a machine learngin regression pipeline that predicts frequency of power failure and power outage duration using geographically referenced (GIS) customer and infrastructure data from ANEEL (National Agency of Electric Energy in Brazil); this process included engineering features, feature selection, and the use of supervised and unsupervised machine learning techniques.
+This repository outlines a machine learning regression pipeline that predicts frequency of power failure and power outage duration using geographically referenced (GIS) customer and infrastructure data from ANEEL (National Agency of Electric Energy in Brazil); this process included engineering features, feature selection, and the use of supervised and unsupervised machine learning techniques.
 
 ![cover to presentation](images/cover.png)
 
